@@ -1,0 +1,52 @@
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-body {
+  display: flex;
+  margin-top: 0;
+}
+
+.sidebar {
+  width: 200px;
+  transition: width 0.3s ease;
+}
+
+.sidebar.closed {
+  width: 0;
+  overflow: hidden;
+}
+
+.app-main {
+  flex-grow: 1;
+  transition: margin-left 0.3s ease;
+}
+
+.app-main.sidebar-open {
+  margin-left: 200px;
+}
+
+.app-main.sidebar-closed {
+  margin-left: 0;
+}
+
+.header-navbar {
+  z-index: 1030; 
+}
+
+.contact-list-container {
+  padding: 20px;
+}
+
+.contact-item .icon-edit,
+.contact-item .icon-delete {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.contact-item .icon-edit:hover,
+.contact-item .icon-delete:hover {
+  color: #007bff;
+}
